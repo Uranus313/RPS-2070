@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #3B2A9F;">
+    <button id="modeButton" style="font-size: 25px; padding: 20px; padding-inline: 40px; background-color: rgb(10, 214, 221); border: none; border-radius: 14px;">PvP</button>
+    <div id="singlePlayerPage" style=" display: flex; flex-direction: column; align-items: center; color: white;">
+        <p id="heading" style="font-size: 25px;">Rock Paper Scissors</p>
+    <p id="scoreBoard">You 0:0 Computer</p>
+    <p id="turn">your turn!</p>
+    <div>
+        <img id="paper" src="./assets/images/paper.png" alt="" style="width: 200px;">
+        <img id="scissors" src="./assets/images/two.png" alt="" style="width: 200px;">
+        <img id="rock" src="./assets/images/rock.png" alt="" style="width: 200px;">
+    </div>
+    <p id="startP" style="font-size: 25px;">Start</p>
+    </div>
+    <div id="multiPlayerPage" style="display: none; flex-direction: column; align-items: center; color: white;">
+        <p id="playerScoreBoard">Player1 --- 0 : 0 --- Player2</p>
+        <p id="playerStart" style="font-size: 25px;">Start</p>
+        <div style="display: flex; justify-content: space-between; width: 100%;">
+            <div style="display: flex; background-color: blueviolet;">
+                <img id="paper1" src="./assets/images/paper.png" alt="" style="width: 150px;">
+                <img id="scissors1" src="./assets/images/two.png" alt="" style="width: 150px;">
+                <img id="rock1" src="./assets/images/rock.png" alt="" style="width: 150px;">
+            </div>
+            <div style="display: flex; background-color: greenyellow;">
+                <img id="paper2" src="./assets/images/paper.png" alt="" style="width: 150px;">
+                <img id="scissors2" src="./assets/images/two.png" alt="" style="width: 150px;">
+                <img id="rock2" src="./assets/images/rock.png" alt="" style="width: 150px;">
+            </div>
+        </div>
+    </div>
+
+    
+<script src="./rockps.js"></script>
+</body>
+</html>
