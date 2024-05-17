@@ -58,32 +58,70 @@ function play2(number1,number2){
     player2choice = -1;
     const scoreBoard = document.getElementById("playerScoreBoard");
     let heading = document.getElementById("playerStart");
+    let player1move = document.getElementById("player1move");
+    let player2move = document.getElementById("player2move");
+    switch (number1) {
+        case 0:
+            player1move.innerHTML = "paper";
+            break;
+        case 1:
+            player1move.innerHTML = "scissors";
+            break;
+        case 2: 
+            player1move.innerHTML = "rock";
+            break;    
+    }
+    switch (number2) {
+        case 0:
+            player2move.innerHTML = "paper";
+            break;
+        case 1:
+            player2move.innerHTML = "scissors";
+            break;
+        case 2: 
+            player2move.innerHTML = "rock";
+            break;    
+    }
     if(number1 == number2){
         heading.innerHTML = "Draw!"; 
         heading.style.color = "white";
+        player1move.style.color = "white";
+        player2move.style.color = "white";
     }else if(number1 == 0 && number2 == 1){
         heading.innerHTML = "Player 2 won!"; 
         heading.style.color = "red";
+        player1move.style.color = "red";
+        player2move.style.color = "green";
         player2Score++;
     }else if(number1 == 0 && number2 == 2){
         heading.innerHTML = "Player 1 won!"; 
         heading.style.color = "rgb(24, 255, 3)";
+        player1move.style.color = "green";
+        player2move.style.color = "red";
         player1Score++;
     }else if(number1 == 1 && number2 == 0){
         heading.innerHTML = "Player 1 won!"; 
         heading.style.color = "rgb(24, 255, 3)";
+        player1move.style.color = "green";
+        player2move.style.color = "red";
         player1Score++;
     }else if(number1 == 1 && number2 == 2){
         heading.innerHTML = "Player 2 won!"; 
         heading.style.color = "red";
+        player1move.style.color = "red";
+        player2move.style.color = "green";
         player2Score++;
     }else if(number1 == 2 && number2 == 0){
         heading.innerHTML = "Player 2 won!"; 
         heading.style.color = "red";
+        player1move.style.color = "red";
+        player2move.style.color = "green";
         player2Score++;
     }else if(number1 == 2 && number2 == 1){
         heading.innerHTML = "Player 1 won!"; 
         heading.style.color = "rgb(24, 255, 3)";
+        player1move.style.color = "green";
+        player2move.style.color = "red";
         player1Score++;
     }
     scoreBoard.innerHTML = `Player1 --- ${player1Score} : ${player2Score} --- Player2`
